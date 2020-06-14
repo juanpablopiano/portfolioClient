@@ -12,7 +12,7 @@ const navbar = () => {
 			<Navbar bg="dark" variant="dark">
 				<Navbar.Brand href="#home">
 					<img
-						src="/logo.svg"
+						src="/piano.svg"
 						width="30"
 						height="30"
 						className="d-inline-block align-top"
