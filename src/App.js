@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 
+import Navbar from './Navbar/Navbar';
 class App extends Component {
 
 	state = {
@@ -10,7 +11,8 @@ class App extends Component {
 	}
 
 	componentDidMount() {
-		axios.get("http://localhost:3000")
+		console.log(process);
+		axios.get(`${process.env.REACT_APP_BACKEND_URL}`)
 		.then( json => {
 			this.setState({
 				title: json.data.title,
@@ -24,6 +26,7 @@ class App extends Component {
 
 		return (
 			<div>
+				<Navbar />
 				<h1>Hello, welcome to my {this.state.title}</h1>
 				<p>My name is {this.state.name}</p>
 			</div>
